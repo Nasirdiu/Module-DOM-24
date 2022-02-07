@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <header id="dom">
+      <h1>Welcome to Document object model</h1>
+      <h2>Welcome DOM</h2>
+    </header>
+
+    <main>
+      <section id="gird">
+        <article class="blog">
+          <h3 class="blogs">This is my blog 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+            aspernatur, ipsum enim sit explicabo blanditiis! Accusamus iste
+            eius, quam quas nostrum quaerat commodi vero. Nisi modi recusandae
+            ullam minus suscipit!
+          </p>
+        </article>
+        <article class="blog">
+          <h3 class="blogs">This is my blog 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+            aspernatur, ipsum enim sit explicabo blanditiis! Accusamus iste
+            eius, quam quas nostrum quaerat commodi vero. Nisi modi recusandae
+            ullam minus suscipit!
+          </p>
+        </article>
+        <article class="blog">
+          <h3 class="blogs">This is my blog 3</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+            aspernatur, ipsum enim sit explicabo blanditiis! Accusamus iste
+            eius, quam quas nostrum quaerat commodi vero. Nisi modi recusandae
+            ullam minus suscipit!
+          </p>
+        </article>
+        <article class="blog">
+          <h3 class="blogs">This is my blog 4</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+            aspernatur, ipsum enim sit explicabo blanditiis! Accusamus iste
+            eius, quam quas nostrum quaerat commodi vero. Nisi modi recusandae
+            ullam minus suscipit!
+          </p>
+        </article>
+      </section>
+      <ul id="friends">
+        <li>number 1</li>
+        <li>number 2</li>
+        <li>number 3</li>
+        <li>number 4</li>
+        <li>number 5</li>
+        <li>number 6</li>
+      </ul>
+    </main>
+
+    <script>
+      //header section.
+      const dom = document.getElementById("dom");
+      dom.style.color = "white";
+      dom.style.textAlign = "center";
+      dom.style.backgroundColor = "black";
+      //class blog
+      const blogClass = document.getElementsByClassName("blog");
+      for (const blogs of blogClass) {
+        blogs.style.border = "2px solid red";
+        blogs.style.margin = "10px";
+        blogs.style.padding = "10px";
+        blogs.style.borderRadius = "10px";
+      }
+      const blogsClass = document.getElementsByClassName("blogs");
+      for (const bloger of blogsClass) {
+        bloger.style.textAlign = "center";
+        bloger.style.color = "red";
+        // bloger.style.backgroundColor='#6231EF'
+      }
+      // remove
+      const friends = document.getElementById("friends");
+      const fifti = friends.children[2];
+      console.log(fifti);
+      friends.removeChild(fifti);
+
+      //creat
+      const add = document.createElement("li");
+      add.innerText = "number-100 create";
+
+      const ul = document.getElementById("friends");
+      ul.appendChild(add);
+    </script>
+  </body>
+</html>
